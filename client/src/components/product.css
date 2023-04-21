@@ -1,0 +1,4 @@
+.box:hover .icons{
+    bottom: 0;
+    visibility: visible;
+}
