@@ -19,7 +19,7 @@ const HomeSection = () => {
               </div>
    
                 <div className=''>
-                  <img src={homePhoto} alt=""  className='hidden md:block md:fixed md:bottom-0  md:right-[-10rem] md:w-10/12 md:h-4/5'/>
+                  <img src={homePhoto} alt=""  className='hidden md:block md:absolute md:bottom-0  md:right-[-10rem] md:w-10/12 md:h-4/5'/>
                 </div>
             </div>
         </section>
