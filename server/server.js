@@ -25,7 +25,7 @@ app.use('/mail' , mailRoute)
 app.use('/payment' , paymentRoute)
 
 app.get('/' , (req , res)=>{
-    res.send("hello world")
+    res.send("hello")
 })
 
 app.listen('3000' ,()=>{
