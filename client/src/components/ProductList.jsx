@@ -106,8 +106,8 @@ const ProductList = () => {
           <h1 className='mb-4'>Filter</h1>
           <select name="" id="" className='w-[10rem]' onChange={handleSelectChange}>
             <option value="default">Default</option>
-            <option value="to_low">Price - High to Low</option>
-            <option value="to_high">Price - Low to High</option>
+            <option value="to_low">Price - Low to High</option>
+            <option value="to_high">Price - High to Low</option>
           </select>
         </div>
 

@@ -14,7 +14,7 @@ const Product = ({id , name , imgLink , price , description}) => {
     const [isAddedInWishList , setIsAddedInWishList] = useState(false)
     const navigate = useNavigate();
 
-    const user = jwt(localStorage.getItem('token'))
+    
 
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
@@ -33,7 +33,8 @@ const Product = ({id , name , imgLink , price , description}) => {
     const handleAddToWishList = () =>{
         if (!auth.isAuthenticated){
             navigate('/login'); 
-          }
+        }
+        const user = jwt(localStorage.getItem('token'))
         if(!isAddedInWishList){
             dispatch(addProducts({id : user.id ,_id:id ,  name ,imgLink , price , description}))
             setIsAddedInWishList(true)

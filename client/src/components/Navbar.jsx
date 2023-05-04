@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { AiOutlineClose , AiOutlineMenu , AiFillHeart } from 'react-icons/ai'
 import { FaUserAlt , FaShoppingCart }from 'react-icons/fa'
+import { FiLogIn } from 'react-icons/fi'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { useState } from 'react'
 import { Link , useLocation } from 'react-router-dom'
@@ -9,6 +10,7 @@ import { useSelector } from 'react-redux'
 const Navbar = ({route}) => {
     const [nav , setNav] = useState(true)
     const cart = useSelector(state => state.cart)
+    const auth = useSelector(state => state.auth)
     const location = useLocation()
     const path=location.pathname
     useEffect(()=>{
@@ -31,7 +33,6 @@ const Navbar = ({route}) => {
       <ul className={`w-1/2 h-full md:w-auto md:flex pl-5 fixed  top-16 md:static bg-white md:bg-inherit ease-in-out duration-200   ${!nav ? 'left-0' : 'left-[-100%]' } `}>
         <li className={`py-3 md:text-xl lg:text-2xl  text-[#445752] cursor-pointer md:ml-8 ${path=='/' && 'font-semibold'}`}><Link to='/'>Home</Link></li>
         <li className={`py-3 md:text-xl lg:text-2xl  text-[#445752] cursor-pointer md:ml-8 ${path=='/shop' && 'font-semibold'}`}><Link to='/shop'>Shop</Link></li>
-        <li className={`py-3 md:text-xl lg:text-2xl  text-[#445752] cursor-pointer md:ml-8 ${path=='/categories' && 'font-semibold'}`}>Categories</li>
         <li className={`py-3 md:text-xl lg:text-2xl  text-[#445752] cursor-pointer md:ml-8 ${path=='/contact' && 'font-semibold'}`}><Link to='/contact'>Contact</Link></li>
       </ul>
       
@@ -53,7 +54,10 @@ const Navbar = ({route}) => {
 
         <Link to='/login'>
           <div className='cursor-pointer '>
-              <FaUserAlt size={25} />
+            {
+              auth.isAuthenticated==true ? <FaUserAlt size={25} /> : <FiLogIn size={25} />
+            }
+              
           </div>
         </Link>
 

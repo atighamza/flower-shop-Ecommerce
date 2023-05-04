@@ -64,7 +64,7 @@ const Login = () => {
               {errors.email && <span className='text-red-600'>{errors.email?.message}</span>}
 
               <label htmlFor="" className='text-white self-start mb-3'>Password</label>
-              <input {...register('password')} className='w-full h-8 bg-[#F3E1EB] border-[#656565] border-b mb-8' />
+              <input {...register('password')} type='password' className='w-full h-8 bg-[#F3E1EB] border-[#656565] border-b mb-8' />
               {errors.password && <span className='text-red-600'>{errors.password?.message}</span>}
 
               {error &&  ((status>0)&&(status<500)) && <span className='text-red-600'>{error}</span> }

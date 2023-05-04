@@ -10,6 +10,7 @@ import Payment from './pages/Payment'
 import WishList from './pages/WishList'
 import ContactPage from './pages/ContactPage'
 import StripeContainer from './pages/StripeContainer'
+import UserProfile from './pages/UserProfile'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/payment' element={<StripeContainer />} />
           <Route path='/wishList' element={<WishList />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/profile' element={<UserProfile />} />
         </Routes>
       </BrowserRouter>
     </div>

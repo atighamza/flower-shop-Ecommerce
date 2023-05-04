@@ -55,8 +55,47 @@ const getUserById = async (req , res)=>{
     }
 };
 
+const updateName = async (req , res)=>{
+    try {
+        const { name , id } = req.body
+        if (!name) { return res.status(400).json({message : "name can't be empty"})}
+        if (!id) { return res.status(400).json({message : "user id  can't be empty"})}
+        else{
+            const user = await User.findOne({ _id: id })
+            if(!user) {res.status(404).json({ message: "User not found" })}
+            else{
+                await User.findOneAndUpdate({_id : id},{name})
+                res.status(200).json({message : "name updated"});
+            }   
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+const updatePassword = async (req , res)=>{
+    try {
+        const { password , id } = req.body
+        if (!password) { return res.status(400).json({message : "password can't be empty"})}
+        if (!id) { return res.status(400).json({message : "user id  can't be empty"})}
+        else{
+            const user = await User.findOne({ _id: id })
+            if(!user) {res.status(404).json({ message: "User not found" })}
+            else{
+                await User.findOneAndUpdate({_id : id},{password})
+                res.status(200).json({message : "passwords updated"});
+            }   
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+
 module.exports = {
     getAllUsers , 
     createUser , 
-    getUserById
+    getUserById , 
+    updateName , 
+    updatePassword
 }

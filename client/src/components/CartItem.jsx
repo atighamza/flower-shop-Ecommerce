@@ -24,7 +24,7 @@ const increaseQunatity = ()=>{
   return (
     <div className='flex flex-col items-center md:flex-row  md:items-center w-[80%]  md:w-[60%] lg:w-full   border border-[#E0B1B8] bg-white text-black relative  mb-5'>
       <div className='img md:border-r-[1px]   md:border-slate-100 overflow-hidden	'>
-        <img src={img} alt="" className='w-full h-[15rem] hover:scale-110 ' />
+        <img src={img} alt="" className='w-[15rem] h-[15rem] hover:scale-110 ' />
       </div>
       <div className='content flex flex-col gap-4 items-center text-[#39524C] mt-8 md:pr-[3rem] md:pl-[7rem]'>
         <h3 className='text-3xl'>{name}</h3>

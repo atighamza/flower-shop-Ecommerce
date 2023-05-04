@@ -67,11 +67,11 @@ const Cart = () => {
             {length === 0 ?
             <div className='flex justify-center items-center mt-8 text-white'>
                 <div className='flex items-center flex-col'>
-                    <div><MdAddShoppingCart size={70} className='mx-auto'/></div>
+                    <div><MdAddShoppingCart size={70} className='mx-auto text-[#445752]'/></div>
                     
-                    <h1 className='text-3xl'>No Items in cart</h1>
-                    <p className='text-lg mt-4'>Add items you want to shop</p>
-                    <button className='bg-[#E74593] p-4 mt-5 '><Link to='/shop'>Start Shopping</Link></button>
+                    <h1 className='text-3xl text-[#445752] '>No Items in cart</h1>
+                    <p className='text-lg mt-4 text-[#445752] ' >Add items you want to shop</p>
+                    <button className='bg-[#E74593] p-4 mt-5  '><Link to='/shop'>Start Shopping</Link></button>
 
                 </div>
             </div>
