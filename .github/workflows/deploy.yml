@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
+    steps:
       # Checkout the code from the GitHub repository
       - name: Checkout code
         uses: actions/checkout@v2
