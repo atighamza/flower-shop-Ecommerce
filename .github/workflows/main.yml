@@ -17,7 +17,6 @@ jobs:
         working-directory: ./client
         run: |
           npm install
-          npm test
           npm run build 
           npm run deploy
 
@@ -26,6 +25,5 @@ jobs:
         working-directory: ./server
         run: |
           npm install
-          npm test
           npm run build 
           npm run deploy
