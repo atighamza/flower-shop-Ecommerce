@@ -1,0 +1,25 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    # This is telling GitHub to run the workflow on the latest version of Ubuntu.
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code from the GitHub repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install dependencies and run tests for the client application
+      - name: Install and Test Client
+        working-directory: ./client
+        run: |
+          npm install
+
+      # Install dependencies, export environment variables to be used by application and run tests for the server application
+      - name: Install and Test Server
+        working-directory: ./server
+        run: |
+          npm install
