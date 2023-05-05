@@ -11,12 +11,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '19.7.0'
-      - run: npm install
+  steps:
+      # Checkout the code from the GitHub repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install dependencies and run tests for the client application
+      - name: Install and Test Client
+        working-directory: ./client
+        run: |
+          npm install
+          npm run test
+
+      # Install dependencies, export environment variables to be used by application and run tests for the server application
+      - name: Install and Test Server
+        working-directory: ./server
+        run: |
+          npm install
       - run: npm test
       - run: npm build
       - run: npm deploy
