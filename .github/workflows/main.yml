@@ -17,9 +17,15 @@ jobs:
         working-directory: ./client
         run: |
           npm install
+          npm test
+          npm run build 
+          npm run deploy
 
       # Install dependencies, export environment variables to be used by application and run tests for the server application
       - name: Install and Test Server
         working-directory: ./server
         run: |
           npm install
+          npm test
+          npm run build 
+          npm run deploy
