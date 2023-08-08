@@ -1,10 +1,10 @@
-Flower-shop-Ecommerce
+Flower-shop-Ecommerce <br />
 
-flower shop with different types of flower built using mern stack
--tailwind for styling
--JWT for authentication.
--nodemailer for receiving customer reviews.
--stripe for payment
+flower shop with different types of flower built using mern stack <br />
+-tailwind for styling <br />
+-JWT for authentication. <br />
+-nodemailer for receiving customer reviews. <br />
+-stripe for payment <br />
 
 ### Home screen : 
 ![image](https://github.com/atighamza/flower-shop-Ecommerce/assets/61515030/d6934035-9605-4b9b-8ec6-48d1cd239d26)
