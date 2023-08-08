@@ -1,6 +1,7 @@
 Flower-shop-Ecommerce
 
 flower shop with different types of flower built using mern stack
+-tailwind for styling
 -JWT for authentication.
 -nodemailer for receiving customer reviews.
 -stripe for payment
